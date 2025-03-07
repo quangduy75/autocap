@@ -36,7 +36,56 @@
         .table tbody tr:hover {
             background: #555;
         }
+        @media (max-width: 768px) {
+            .table-responsive {
+                overflow-x: auto;
+            }
+            .header {
+                font-size: 20px;
+                padding: 10px;
+            }
+            .table-container {
+                padding: 10px;
+            }
+            .btn-sm {
+                font-size: 12px;
+                padding: 3px 6px;
+            }
+        }
     </style>
+</head>
+<body onload="generateRandomData()">
+    <div class="header">AUTONET-CAP</div>
+    <div class="container mt-4">
+        <div class="table-container">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Địa chỉ</th>
+                            <th>Tuyến cáp</th>
+                            <th>Ua (V)</th>
+                            <th>Ub (V)</th>
+                            <th>Uc (V)</th>
+                            <th>Ia (A)</th>
+                            <th>Ib (A)</th>
+                            <th>Ic (A)</th>
+                            <th>PF</th>
+                            <th>C1</th>
+                            <th>C2</th>
+                            <th>C3</th>
+                            <th>C4</th>
+                            <th>C5</th>
+                            <th>C6</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     <script>
         function generateRandomData() {
             let tbody = document.getElementById("data-body");
@@ -81,38 +130,5 @@
             }
         }
     </script>
-</head>
-<body onload="generateRandomData()">
-    <div class="header">AUTONET-CAP</div>
-    <div class="container mt-4">
-        <div class="table-container">
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Địa chỉ</th>
-                            <th>Tuyến cáp</th>
-                            <th>Ua (V)</th>
-                            <th>Ub (V)</th>
-                            <th>Uc (V)</th>
-                            <th>Ia (A)</th>
-                            <th>Ib (A)</th>
-                            <th>Ic (A)</th>
-                            <th>PF</th>
-                            <th>C1</th>
-                            <th>C2</th>
-                            <th>C3</th>
-                            <th>C4</th>
-                            <th>C5</th>
-                            <th>C6</th>
-                            <th>Hành động</th>
-                        </tr>
-                    </thead>
-                    <tbody id="data-body">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
 </body>
 </html>
